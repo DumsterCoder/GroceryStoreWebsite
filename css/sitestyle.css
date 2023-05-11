@@ -1,0 +1,145 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body { 
+    font-family:  var(--title-two-font);}
+
+.container { max-width: 1200px; margin: 0 auto;}
+
+:root {
+    /* Text Size and Font Families */
+    --title-font: 'Source Serif 4', serif;
+    --title-size: 25px;  
+    --title-two-font: 'Coda', cursive;
+
+    /* Colors */
+    --yellow-1: rgb(137, 190, 211);
+    --yellow-2: rgb(133, 142, 168);
+    --blue-1: rgb(49, 69, 180);
+    --black: rgb(0, 0, 0);
+}
+
+
+
+
+
+/* Page 1 */
+
+/* Nav */
+
+.flat {
+    display: flex;
+}
+
+.viz {
+    display: none;
+}
+
+.logo-nav-link { 
+    font-family: var(--title-font); 
+    text-decoration: none; 
+    color: var(--black); 
+    font-size: var(--title-size); 
+    font-weight: 500;
+    padding-right: 3em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.bar-color {
+    background-color: var(--yellow-1);
+}
+
+.nav-bar { 
+    min-height: 70px;
+    display: flex;
+    align-items: center; }
+
+.nav-list { 
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center; }
+
+.nav-link { 
+    color: var(--black); 
+    text-decoration: none; 
+    padding: 1em 1em; }
+
+.nav-link:hover {
+    background-color: var(--yellow-2);
+}
+
+
+
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+    background-image: url(/img/title-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+}
+
+
+
+
+
+
+@media (max-width: 650px) {
+
+
+    .flat {
+        display: block;
+    }
+
+    .logo {
+        min-height: 70px;
+    }
+
+    .nav-list {
+        display: block;
+        padding-top: 1em;
+        background-color: var(--yellow-1);
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        top: 70px;
+        left: 0px;
+        text-align: center;
+        transition: all 0.5s linear;}
+
+    .nav-list li {
+        padding-bottom: 2em;
+    }
+
+    .hero h2, p {
+        padding: 0% 25%;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .viz {
+        display: flex;
+    }
+
+    .viz:hover {
+        cursor: pointer;
+    }
+
+    .viz li {
+        list-style: none;
+    }
+}
