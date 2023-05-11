@@ -22,8 +22,17 @@ body {
     --black: rgb(0, 0, 0);
 }
 
+.btn {
+    text-decoration: none;
+    color: var(--black);
+    padding: 1em 2em;
+    background-color: var(--yellow-1);
+    border-radius: 50px;
+}
 
-
+.btn:hover {
+    background-color: var(--yellow-2);
+}
 
 
 /* Page 1 */
@@ -91,6 +100,16 @@ body {
     height: 95vh;
 }
 
+.hero--text {
+    padding: 20% 30%;
+    text-align: center;
+}
+
+.hero--text p {
+    padding-top: 1em;
+    padding-bottom: 3em;
+}
+
 
 
 
@@ -141,5 +160,9 @@ body {
 
     .viz li {
         list-style: none;
+    }
+
+    .hero--text {
+        padding: 35% 10%;
     }
 }
