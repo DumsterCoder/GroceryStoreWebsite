@@ -12,7 +12,9 @@ body {
 :root {
     /* Text Size and Font Families */
     --title-font: 'Source Serif 4', serif;
+    --small-title-size: 18px;
     --title-size: 25px;  
+    --title-two-size: 30px;
     --title-two-font: 'Coda', cursive;
     --large-title-size: 35px;
 
@@ -21,6 +23,10 @@ body {
     --yellow-2: rgb(133, 142, 168);
     --blue-1: rgb(49, 69, 180);
     --black: rgb(0, 0, 0);
+}
+
+img, svg, video {
+    max-width: 100%;
 }
 
 .btn {
@@ -119,6 +125,27 @@ body {
 .hero--text p {
     padding-top: 1em;
     padding-bottom: 3em;
+}
+
+/* Gallery section */
+
+.gallery-title {
+    font-family: var(--title-three-font);
+    font-size: var(--small-title-size);
+    text-align: center;
+    padding: 3em 0em;
+    font-weight: 400;
+}
+
+.gallery-box {
+    text-align: center;
+}
+
+.vegg {
+    height: 300px;
+    width: 315px;
+    object-fit: cover;
+    padding: 1em;
 }
 
 
