@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body { 
     font-family:  var(--title-two-font);}
 
@@ -47,6 +51,12 @@ img, svg, video {
 
 /* Nav */
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
 .flat {
     display: flex;
     width: 100%;
@@ -78,7 +88,7 @@ img, svg, video {
 .nav-bar { 
     min-height: 60px;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .nav-list { 
@@ -93,7 +103,7 @@ img, svg, video {
 .nav-link { 
     color: var(--black); 
     text-decoration: none; 
-    padding: 1em 1em; }
+    padding: 0.8em 0.8em; }
 
 .nav-link:hover {
     background-color: var(--yellow-2);
@@ -109,6 +119,7 @@ img, svg, video {
     background-image: url(/img/title-img.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     height: 75vh;
 }
@@ -119,7 +130,7 @@ img, svg, video {
 }
 
 .hero--text h2 {
-    font-size: var(--large-title-size);
+    font-size: 35px;
 }
 
 .hero--text p {
@@ -148,6 +159,10 @@ img, svg, video {
     padding: 1em;
 }
 
+.vegg:hover {
+    opacity: 75%;
+}
+
 
 
 
@@ -155,6 +170,10 @@ img, svg, video {
 
 @media (max-width: 650px) {
 
+
+    .hero--text h2 {
+        font-size: 25px;
+    }
 
     .flat {
         display: block;
@@ -208,6 +227,12 @@ img, svg, video {
     }
 
     .hero--text {
-        padding: 35% 10%;
+        padding: 30% 5%;
+    }
+}
+
+@media (max-width: 370px) {
+    .hero--text {
+        padding: 3% 1%;
     }
 }
