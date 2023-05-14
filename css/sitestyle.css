@@ -23,10 +23,12 @@ body {
     --large-title-size: 35px;
 
     /* Colors */
-    --yellow-1: rgb(137, 190, 211);
-    --yellow-2: rgb(133, 142, 168);
+    --color-1: rgb(137, 190, 211);
+    --color-2: rgb(133, 142, 168);
+    --color-3: rgb(28, 48, 58);
     --blue-1: rgb(49, 69, 180);
     --black: rgb(0, 0, 0);
+    --white: rgb(223, 223, 223);
 }
 
 img, svg, video {
@@ -37,13 +39,13 @@ img, svg, video {
     text-decoration: none;
     color: var(--black);
     padding: 1em 2em;
-    background-color: var(--yellow-1);
+    background-color: var(--color-1);
     border-radius: 50px;
-    border: 1px solid var(--yellow-2);
+    border: 1px solid var(--color-2);
 }
 
 .btn:hover {
-    background-color: var(--yellow-2);
+    background-color: var(--color-2);
 }
 
 
@@ -52,7 +54,7 @@ img, svg, video {
 /* Nav */
 
 header {
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 9;
 }
@@ -82,7 +84,7 @@ header {
 }
 
 .bar-color {
-    background-color: var(--yellow-1);
+    background-color: var(--color-1);
 }
 
 .nav-bar { 
@@ -106,7 +108,7 @@ header {
     padding: 0.8em 0.8em; }
 
 .nav-link:hover {
-    background-color: var(--yellow-2);
+    background-color: var(--color-2);
 }
 
 
@@ -121,7 +123,7 @@ header {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 75vh;
+    height: 60vh;
 }
 
 .hero--text {
@@ -140,6 +142,12 @@ header {
 
 /* Gallery section */
 
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .gallery-title {
     font-family: var(--title-three-font);
     font-size: var(--small-title-size);
@@ -149,18 +157,97 @@ header {
 }
 
 .gallery-box {
+    width: 100%;
     text-align: center;
+    align-items: center;
 }
 
 .vegg {
-    height: 300px;
-    width: 315px;
+    height: 240px;
+    width: 240px;
+    background-repeat: no-repeat; 
+    background-position: center;
+    /* background-size: cover; */
     object-fit: cover;
     padding: 1em;
 }
+/* 
+.one { background-image: url(/img/carrot.jpeg); }
+.two { background-image: url(/img/cilantro.jpeg); }
+.three { background-image: url(/img/corn.jpeg); }
+.four { background-image: url(/img/garlic.jpeg); }
+.five { background-image: url(/img/onions.webp); }
+.six { background-image: url(/img/radish.jpeg); }
+.seven { background-image: url(/img/potato.jpeg); }
+.eight { background-image: url(/img/tomato.webp); }
+.nine { background-image: url(/img/asparagus.jpeg); }
+ */
 
 .vegg:hover {
     opacity: 75%;
+}
+
+
+
+
+
+
+
+
+/* Footer */
+
+#footer {
+    background-color: var(--color-3);
+}
+
+.footer-wrap {
+    display: flex;
+    padding: 4em 3em 5em 3em;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.first-footer, .second-footer, .third-footer {
+    list-style: none;
+}
+
+.first-footer {
+    padding-right: 3em;
+}
+
+.second-footer {
+    border-left: 2px solid var(--white);
+    padding-left: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 3em;
+}
+
+.third-footer {
+    border-left: 2px solid var(--white);
+    padding-left: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.list-item {
+    color: var(--white);
+    text-decoration: none;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.list-item:hover {
+    color: var(--color-1);
+}
+
+.copyright {
+    color: var(--white);
+    text-align: center;
+    padding-bottom: 2em;
+    font-size: 12px;
 }
 
 
@@ -193,7 +280,7 @@ header {
         display: block;
         padding-top: 1em;
         padding-right: 0px;
-        background-color: var(--yellow-1);
+        background-color: var(--color-1);
         position: absolute;
         z-index: 10;
         width: 100%;
@@ -228,6 +315,30 @@ header {
 
     .hero--text {
         padding: 30% 5%;
+    }
+
+    .footer-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-footer {
+        padding: 2em 0em;
+        text-align: center;
+    }
+
+    .second-footer {
+        padding: 2em 0em;
+        border-left: none;
+        border-top: 2px solid var(--white);
+        text-align: center;
+    }
+
+    .third-footer {
+        padding: 2em 0em;
+        border-left: none;
+        border-top: 2px solid var(--white);
+        text-align: center;
     }
 }
 
