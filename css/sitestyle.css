@@ -293,6 +293,12 @@ header {
 
 
 
+.white {
+    height: 100px;
+}
+
+
+
 
 @media (max-width: 650px) {
 
@@ -378,5 +384,25 @@ header {
         border-left: none;
         border-top: 2px solid var(--white);
         text-align: center;
+    }
+
+    .act {
+        display: block;
+    }
+
+    .left-b {
+        width: 100%;
+        text-align: center;
+        padding: 7% 0%;
+    }
+
+    .left-b h2 {
+        padding-bottom: 5%;
+    }
+
+    .right-b {
+        width: 100%;
+        text-align: center;
+        padding: 3% 0% 10% 0%;
     }
 }
