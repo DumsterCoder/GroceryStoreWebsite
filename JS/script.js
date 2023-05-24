@@ -1,14 +1,15 @@
 const menuToggle = document.getElementById('menu-toggle');
 const menuList = document.getElementById('menu-list');
 const restOfPage = document.getElementById('main');
+const languageBtn = document.getElementById('lang-toggle')
+
+
+
+
 
 
 function hamburgerBtn() {
-    if(menuList.classList.contains('hidden')) {
-        menuList.classList.remove('hidden');
-    } else {
-        menuList.classList.add('hidden');
-    }
+    menuList.classList.toggle('hidden')
 }
 
 function dismissList() {
@@ -21,5 +22,10 @@ function dismissList() {
 
 
 
-menuToggle.addEventListener('click', hamburgerBtn);
-restOfPage.addEventListener('click', dismissList);
+const init = () => {
+    menuToggle.addEventListener('click', hamburgerBtn);
+    restOfPage.addEventListener('click', dismissList);
+    languageBtn.addEventListener('click', newLanguage);
+}
+
+init();
