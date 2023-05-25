@@ -140,7 +140,7 @@ header {
 }
 
 .hero--text {
-    padding: 15% 30%;
+    padding: 20% 30%;
     text-align: center;
 }
 
@@ -394,4 +394,13 @@ header {
         text-align: center;
         padding: 3% 0% 10% 0%;
     }
+}
+
+@media (max-height: 600px) {
+
+    .hero--text {
+        padding: 4% 28%;
+        align-items: center;
+    }
+    
 }
