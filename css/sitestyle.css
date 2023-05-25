@@ -293,11 +293,24 @@ header {
 
 
     .hero--text h2 {
-        font-size: 25px;
+        font-size: 20px;
+    }
+
+    .hero--text p {
+        font-size: 14px;
+    }
+
+    .btn:hover, .nav-link:hover {
+        background-color: var(--color-1);
+        cursor: pointer;
     }
 
     .flat {
         display: block;
+    }
+
+    .logo-nav-link {
+        font-size: 20px
     }
 
     .logo {
@@ -394,12 +407,22 @@ header {
         text-align: center;
         padding: 3% 0% 10% 0%;
     }
+
+    .vegg {
+        height: 200px;
+        width: 200px;
+        background-repeat: no-repeat; 
+        background-position: center;
+        /* background-size: cover; */
+        object-fit: cover;
+        padding: 1em;
+    }
 }
 
 @media (max-height: 600px) {
 
     .hero--text {
-        padding: 4% 28%;
+        padding: 9% 28%;
         align-items: center;
     }
     
