@@ -21,6 +21,7 @@ body {
     --title-two-size: 30px;
     --title-two-font: 'Coda', cursive;
     --large-title-size: 35px;
+    --super-large-title-size: 45px;
 
     /* Colors */
     --color-1: rgb(197, 221, 230);
@@ -116,12 +117,12 @@ header {
 .nav-link { 
     color: var(--black); 
     text-decoration: none; 
-    padding: 0.8em 0.8em;
+    padding: 0.5em 0.8em;
     opacity: 0.75;
 }
 
 .nav-link:hover {
-    background-color: var(--color-2);
+    border-bottom: 2px solid black;
 }
 
 
@@ -178,6 +179,7 @@ header {
 
 .vegg {
     height: 240px;
+    border-radius: 30px;
     width: 240px;
     background-repeat: no-repeat; 
     background-position: center;
@@ -232,7 +234,7 @@ header {
 
 .footer-wrap {
     display: flex;
-    padding: 6em 3em 4em 3em;
+    padding: 3.5em 3em 4em 3em;
     /* text-align: center; */
     align-items: center;
     justify-content: center;
@@ -289,6 +291,75 @@ header {
 
 
 
+
+
+/* ABOUT PAGE */
+.about-us {
+    display: flex;
+}
+
+.about_text {
+    padding: 8em;
+    width: 50%;
+}
+
+.about_text h3 {
+    padding-bottom: 4%;
+}
+
+.about_photo {
+    padding: 3em 5em 3em 1em;
+    width: 50%;
+}
+
+.about_photo img {
+    height: 50vh;
+    width: 50vw;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+
+/* Contact Section */
+
+.contact-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20vh;
+    background-color: var(--color-3);
+}
+
+.phone, .address, .email {
+    padding: 0 4em;
+    text-align: center;
+}
+
+.phone i, .address i, .email i {
+    font-size: var(--super-large-title-size);
+    padding-bottom: 10%;
+    color: white;
+}
+
+.phone p, .address p, .email p {
+    color: white;
+}
+
+.map {
+    width: 100%;
+    bottom: 0px;
+}
+
+.map iframe {
+    width: 100%;
+}
+
+
+
+
+
+
 @media (max-width: 650px) {
 
 
@@ -302,6 +373,7 @@ header {
 
     .btn:hover, .nav-link:hover {
         background-color: var(--color-1);
+        border-bottom: none;
         cursor: pointer;
     }
 
@@ -334,7 +406,8 @@ header {
         top: 70px;
         left: 0px;
         text-align: center;
-        transition: all 0.5s linear;}
+        transition: all 0.5s linear;
+    }
 
     .nav-list li {
         padding-bottom: 2em;
