@@ -4,3 +4,4 @@
 
 
 This project is intended to put my skills to the test by utilizing what I have learned in both the responsive design course and the Javascript course I have been working through of late.
+See the website live on netlify ->> https://eldeseo.netlify.app/index.html
