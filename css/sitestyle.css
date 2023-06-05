@@ -146,7 +146,9 @@ header {
 }
 
 .hero--text h2 {
-    font-size: 25px;
+    font-size: 30px;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 300
 }
 
 .hero--text p {
@@ -299,7 +301,7 @@ header {
 }
 
 .about_text {
-    padding: 8em;
+    padding: 6em;
     width: 50%;
 }
 
@@ -313,8 +315,8 @@ header {
 }
 
 .about_photo img {
-    height: 50vh;
-    width: 50vw;
+    height: 40vh;
+    width: 30vw;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -344,15 +346,12 @@ header {
 
 .phone p, .address p, .email p {
     color: white;
+    width: 100%;
 }
 
 .map {
-    width: 100%;
-    bottom: 0px;
-}
-
-.map iframe {
-    width: 100%;
+    width: 100vw;
+    height: 40vh;
 }
 
 
