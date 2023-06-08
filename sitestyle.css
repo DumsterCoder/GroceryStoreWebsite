@@ -370,7 +370,7 @@ header {
 .phone i, .address i, .email i {
     font-size: var(--title-three-size);
     padding-bottom: 10%;
-    color: #dbdbdb;
+    color: var(--black);
 }
 
 .phone p, .address p, .email p {
