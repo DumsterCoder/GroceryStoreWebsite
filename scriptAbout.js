@@ -15,7 +15,7 @@ function dismissList() {
   }
 }
 
-var map = L.map("map").setView([40.798603, -81.695959], 17);
+var map = L.map("map").setView([40.798603, -81.695959], 14);
 
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:

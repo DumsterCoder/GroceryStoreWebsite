@@ -19,15 +19,17 @@ body {
     --small-title-size: 18px;
     --title-size: 25px;  
     --title-two-size: 30px;
+    --title-three-size: 35px;
+    --super-large-title-size: 45px;
     --title-two-font: 'Coda', cursive;
     --large-title-size: 35px;
-    --super-large-title-size: 45px;
 
     /* Colors */
     --color-1: rgb(197, 221, 230);
     --color-2: rgb(133, 142, 168);
     --color-3: rgb(28, 48, 58);
     --color-4: rgb(127, 178, 196);
+    --color-5: rgb(130, 162, 168);
     --blue-1: rgb(49, 69, 180);
     --black: rgb(0, 0, 0);
     --white: rgb(223, 223, 223);
@@ -307,12 +309,16 @@ header {
 
 .about_text h3 {
     padding-bottom: 4%;
+    font-size: 30px;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 500
 }
 
 .about_photo {
     padding: 3em 5em 3em 1em;
     width: 50%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .about_photo img {
@@ -326,27 +332,49 @@ header {
 
 /* Contact Section */
 
+.contac-bac {
+    background-color: var(--color-4);
+}
+
 .contact-icons {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20vh;
-    background-color: var(--color-3);
+    padding: 4% 5%;
+}
+
+.contact-icons h3 {
+    padding: 0em 0em 2em;
+    font-size: 30px;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 500;
+}
+
+.con-inf {
+    padding: 0;
+}
+
+.icon-cases {
+    display: flex;
 }
 
 .phone, .address, .email {
-    padding: 0 4em;
+    padding: 0 2em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .phone i, .address i, .email i {
-    font-size: var(--super-large-title-size);
+    font-size: var(--title-three-size);
     padding-bottom: 10%;
-    color: white;
+    color: #dbdbdb;
 }
 
 .phone p, .address p, .email p {
-    color: white;
+    color: var(--black);
     width: 100%;
 }
 
@@ -487,6 +515,56 @@ header {
         object-fit: cover;
         padding: 1em;
     }
+
+
+    /* About Page */
+
+    .about-us {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about_text, .about_photo {
+        width: 100%;
+        padding: 2em 0em;
+        text-align: center;
+    }
+
+    .about_photo img {
+        height: 35vh;
+        width: 70vw;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .about_text h3 {
+        text-align: center;
+    }
+
+    .icon-cases {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .phone, .address, .email {
+        width: 100%;
+        padding: 2em 0em;
+        text-align: center;
+    }
+
+    .con-inf {
+        width: 100%;
+    }
+
+    .phone i, .address i, .email i {
+        padding-bottom: 2%;
+    }
+
+    .contact-icons h3 {
+        padding: 2em 0em 1em;
+    }
+
+
 }
 
 @media (max-height: 600px) {
