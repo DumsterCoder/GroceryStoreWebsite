@@ -9,7 +9,7 @@ html {
 }
 
 body { 
-    font-family:  var(--title-two-font);}
+    font-family:  var(--title-two-font); position: relative;}
 
 .container { max-width: 1000px; margin: 0 auto;}
 
@@ -166,6 +166,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding-bottom: 3em;
+    position: relative;
 }
 
 .gallery-title {
@@ -191,10 +192,111 @@ header {
     /* background-size: cover; */
     object-fit: cover;
     padding: 1em;
+    cursor: pointer;
 }
 
 .vegg:hover {
     opacity: 75%;
+}
+
+
+/* Vegitable Popups */
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(102, 102, 102, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.veg-focus {
+    position: relative;
+    display: flex;
+    background-color: #EEDFE5;
+    width: 65%;
+    height: 500px;
+    border-radius: 8px;
+}
+
+.veg-focus__img {
+    width: 60%;
+    padding: 2em 1.5em;
+}
+
+.veg-focus__img img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.veg-focus__text {
+    width: 40%;
+    padding: 2em 2.5em 2em 1em;
+}
+
+.close {
+    display: flex;
+    justify-content: end;
+    font-size: 2em;
+    font-family: 'Mulish', sans-serif; 
+    font-weight: 100;
+}
+
+.close h5:hover {
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.veg-focus__text h2 {
+    padding-bottom: 0.5em;
+}
+
+.veg-focus__text h4 {
+    padding-bottom: 0.5em;
+    font-weight: 200;
+    font-size: 1.1em;
+}
+
+.veg-focus__text p {
+    font-size: 0.9em;
+    padding-bottom: 3em;
+}
+
+.veg-focus__info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.veg-focus__info p {
+    padding: 0.8em 1.3em 0.7em;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.veg-focus__info a {
+    padding: 0.8em 1.3em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(70, 218, 70);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    transition: 300ms;
+}
+
+.veg-focus__info a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(70, 218, 70);
+}
+
+.away {
+    display: none;
 }
 
 
