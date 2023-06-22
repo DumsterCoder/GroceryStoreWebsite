@@ -46,6 +46,7 @@ img, svg, video {
     background-color: var(--color-1);
     border-radius: 50px;
     border: 1px solid var(--color-2);
+    transition: 300ms;
 }
 
 .btn-2 {
@@ -55,6 +56,7 @@ img, svg, video {
     background-color: var(--color-4);
     border-radius: 50px;
     border: 1px solid var(--color-2);
+    transition: 300ms;
 }
 
 .btn:hover {
@@ -161,12 +163,35 @@ header {
 
 /* Gallery section */
 
-#gallery {
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 0.5fr));
+    grid-auto-rows: minmax(100px, 1fr);
+    grid-auto-flow: dense;
+    grid-gap: 0em 1em;
+    padding: 1em 1em 3.5em;
+    justify-content: center;
+}
+
+.card {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding-bottom: 3em;
-    position: relative;
+    justify-content: center;
+    color: white;
+    padding: 0.8em 0.3em;
+}
+
+.card:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 200ms;
+}
+
+.card img {
+    border-radius: 10px;
+    height: 216px;
+    /* padding: 1em 0em; */
+    object-fit: cover;
 }
 
 .gallery-title {
@@ -177,30 +202,11 @@ header {
     font-weight: 400;
 }
 
-.gallery-box {
-    width: 100%;
-    text-align: center;
-    align-items: center;
-}
-
-.vegg {
-    height: 240px;
-    border-radius: 30px;
-    width: 240px;
-    background-repeat: no-repeat; 
-    background-position: center;
-    /* background-size: cover; */
-    object-fit: cover;
-    padding: 1em;
-    cursor: pointer;
-}
-
-.vegg:hover {
-    opacity: 75%;
-}
-
-
 /* Vegitable Popups */
+
+.crypto {
+    position: relative;
+}
 
 .cover {
     position: absolute;
@@ -215,7 +221,6 @@ header {
 }
 
 .veg-focus {
-    position: relative;
     display: flex;
     background-color: #EEDFE5;
     width: 65%;
@@ -499,6 +504,37 @@ header {
     width: 100%;
 }
 
+@media (max-width: 1150px) {
+    .veg-focus {
+        display: flex;
+        flex-direction: column;
+        height: 630px;
+        width: 65%;
+        min-width: 300px;
+    }
+
+    .veg-focus__img {
+        width: 100%;
+        height: 50%;
+        padding: 2em 2em 0em 2em;
+    }
+
+    .veg-focus__img img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .veg-focus__text {
+        height: 50%;
+        width: 100%;
+        padding: 1em 2em 2em 2em ;
+    }
+
+    #depart {
+        display: none;
+    }
+}
+
 @media (max-width: 822px) {
     .about_text {
         padding: 6em 3em;
@@ -509,6 +545,12 @@ header {
 
 @media (max-width: 650px) {
     
+    .veg-focus__text p {
+        font-size: 12px;
+        padding-left: 0em;
+        padding-right: 0em;
+    }
+
     .hero--text {
         padding: 40% 5% 30%;
     }
@@ -633,16 +675,6 @@ header {
         width: 100%;
         text-align: center;
         padding: 3% 0% 10% 0%;
-    }
-
-    .vegg {
-        height: 200px;
-        width: 200px;
-        background-repeat: no-repeat; 
-        background-position: center;
-        /* background-size: cover; */
-        object-fit: cover;
-        padding: 1em;
     }
 
 
