@@ -173,7 +173,7 @@ function determineVeggie(e) {
 
 
 function createPopUp(veg) {
-  popUp.classList.remove('away')
+  popUp.classList.toggle('away')
   let icon;
   if(veg.stocked) {
     icon = '<i class="fa-solid fa-check"></i>'
@@ -192,13 +192,14 @@ function createPopUp(veg) {
           </div>
           <h2>${veg.title}</h2>
           <h4>${veg.decription}</h4>
-          <p>${veg.details}</p>
+          <p class='veg-focus__details' >${veg.details}</p>
           <div class="veg-focus__info">
             <p>In Stock: &nbsp;&nbsp; ${icon}</p>
             <a href="#">Buy Today</a>
           </div>
         </div>`;
   popUp.appendChild(div);
+  popUp.style.opacity = '1';
 }
 
 function hamburgerBtn() {
@@ -255,7 +256,10 @@ document.addEventListener("click", function(e){
   const target = e.target.closest("#depart");
 
   if(target){
-    popUp.innerHTML = '';
-    popUp.classList.toggle('away')
+    popUp.style.opacity = '0'
+    setTimeout(function() {
+      popUp.innerHTML = '';
+      popUp.classList.toggle('away')
+    }, 500);
   }
 });

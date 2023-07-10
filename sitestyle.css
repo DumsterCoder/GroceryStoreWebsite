@@ -204,12 +204,14 @@ header {
 
 /* Vegitable Popups */
 
+
+
 .crypto {
     position: relative;
 }
 
 .cover {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -218,6 +220,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 500ms;
 }
 
 .veg-focus {
@@ -278,7 +281,7 @@ header {
 }
 
 .veg-focus__info p {
-    padding: 0.8em 1.3em 0.7em;
+    padding: 0.8em 1.3em 0.7em 1.3em;
     border: 1px solid black;
     display: flex;
     align-items: center;
@@ -301,8 +304,10 @@ header {
 }
 
 .away {
-    display: none;
+    display: none;   
 }
+
+
 
 
 
@@ -394,7 +399,14 @@ header {
     font-size: 12px;
 }
 
+.hov {
+    padding: 0em;
+    transition: 200ms;
+}
 
+.hov:hover {
+    color: #727272;
+}
 
 .white {
     height: 100px;
@@ -509,7 +521,7 @@ header {
         display: flex;
         flex-direction: column;
         height: 630px;
-        width: 65%;
+        width: 85%;
         min-width: 300px;
     }
 
@@ -527,7 +539,7 @@ header {
     .veg-focus__text {
         height: 50%;
         width: 100%;
-        padding: 1em 2em 2em 2em ;
+        padding: 1em 4em 2em 4em ;
     }
 
     #depart {
@@ -545,10 +557,14 @@ header {
 
 @media (max-width: 650px) {
     
-    .veg-focus__text p {
+    .veg-focus__details {
         font-size: 12px;
         padding-left: 0em;
         padding-right: 0em;
+    }
+
+    .veg-focus__text {
+        padding: 1em 2em;
     }
 
     .hero--text {
