@@ -215,6 +215,7 @@ header {
     top: 0;
     left: 0;
     height: 100%;
+    overflow-y: auto;
     width: 100%;
     background-color: rgba(102, 102, 102, 0.7);
     display: flex;
@@ -516,7 +517,18 @@ header {
     width: 100%;
 }
 
+.upper-close {
+    width: 100%;
+    justify-content: end;
+    display: none;
+    font-size: 1.5em;
+    font-family: 'Mulish', sans-serif; 
+    padding: 0em 1.5em 0em 1em;
+    cursor: pointer;
+}
+
 @media (max-width: 1150px) {
+    
     .veg-focus {
         display: flex;
         flex-direction: column;
@@ -525,10 +537,14 @@ header {
         min-width: 300px;
     }
 
+    .upper-close {
+        display: flex;
+    }
+
     .veg-focus__img {
         width: 100%;
         height: 50%;
-        padding: 2em 2em 0em 2em;
+        padding: 0em 2em 0em 2em;
     }
 
     .veg-focus__img img {

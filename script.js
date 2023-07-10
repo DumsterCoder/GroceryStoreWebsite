@@ -16,6 +16,7 @@ const pepBtn = document.getElementById("pep-btn");
 const eggBtn = document.getElementById("egg-btn");
 const popUp = document.getElementById('pop-up');
 const depart = document.getElementById('depart');
+const depart2 = document.getElementById('depart2');
 
 const tomato = {
   image:
@@ -183,6 +184,9 @@ function createPopUp(veg) {
   const div = document.createElement('div');
   div.classList.add('veg-focus');
   div.innerHTML = `
+        <div id="depart2" class="upper-close">
+          <h3>x</h3>
+        </div>
         <div class="veg-focus__img">
           <img src="${veg.image}" alt="">
         </div>
@@ -254,6 +258,18 @@ menuToggle.addEventListener("click", hamburgerBtn);
 restOfPage.addEventListener("click", dismissList);
 document.addEventListener("click", function(e){
   const target = e.target.closest("#depart");
+
+  if(target){
+    popUp.style.opacity = '0'
+    setTimeout(function() {
+      popUp.innerHTML = '';
+      popUp.classList.toggle('away')
+    }, 500);
+  }
+});
+
+document.addEventListener("click", function(e){
+  const target = e.target.closest("#depart2");
 
   if(target){
     popUp.style.opacity = '0'
