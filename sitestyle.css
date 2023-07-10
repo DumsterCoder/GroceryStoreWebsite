@@ -189,7 +189,7 @@ header {
 
 .card img {
     border-radius: 10px;
-    height: 216px;
+    height: 150px;
     /* padding: 1em 0em; */
     object-fit: cover;
 }
@@ -518,12 +518,14 @@ header {
 }
 
 .upper-close {
-    width: 100%;
     justify-content: end;
     display: none;
     font-size: 1.5em;
     font-family: 'Mulish', sans-serif; 
-    padding: 0em 1.5em 0em 1em;
+    padding: 0em 1.5em 0.3em 1em;
+}
+
+.upper-close h3 {
     cursor: pointer;
 }
 
@@ -535,6 +537,10 @@ header {
         height: 630px;
         width: 85%;
         min-width: 300px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 0.1fr))
     }
 
     .upper-close {
@@ -581,6 +587,10 @@ header {
 
     .veg-focus__text {
         padding: 1em 2em;
+    }
+
+    .veg-focus__img {
+        height: 30%;
     }
 
     .hero--text {

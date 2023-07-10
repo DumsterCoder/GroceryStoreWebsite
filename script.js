@@ -184,8 +184,8 @@ function createPopUp(veg) {
   const div = document.createElement('div');
   div.classList.add('veg-focus');
   div.innerHTML = `
-        <div id="depart2" class="upper-close">
-          <h3>x</h3>
+        <div class="upper-close">
+          <h3 id="depart2" >x</h3>
         </div>
         <div class="veg-focus__img">
           <img src="${veg.image}" alt="">
